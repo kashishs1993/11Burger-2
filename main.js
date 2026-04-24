@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const start = async() => {
       const mindarThree = new window.MINDAR.IMAGE.MindARThree({
         container: document.body,
-        imageTargetSrc: './images/target/französischer_truffle_smash.mind',
+        imageTargetSrc: './targets.mind',
         uiScanning: "no",
         uiLoading: "no",
       });

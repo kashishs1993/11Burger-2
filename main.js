@@ -11,31 +11,38 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       const {renderer, scene, camera} = mindarThree;
   
-      const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
-      scene.add(light);
+      // const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
+      // scene.add(light);
+
+      // Light
+    const light = new THREE.HemisphereLight( 0xffffff, 0xbbbbff, 1 );
+    scene.add(light);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 2);
+    dirLight.position.set(1, 2, 3);
+    scene.add(dirLight);
   
       const burger1 = await loadGLTF('./model/französischer_truffle_smash.glb');
-      burger1.scene.scale.set(0.5, 0.5, 0.5);
+      burger1.scene.scale.set(1,1,1);
       burger1.scene.rotation.set(90,0,0);
       burger1.scene.position.set(0, -0.4, 0);
   
       const burger2 = await loadGLTF('./model/italien_grando.glb');
-      burger2.scene.scale.set(0.5, 0.5, 0.5);
+      burger2.scene.scale.set(1,1,1);
       burger2.scene.rotation.set(90,0,0);
       burger2.scene.position.set(0, -0.4, 0);
 
       const burger3 = await loadGLTF('./model/j11.glb');
-      burger3.scene.scale.set(0.5, 0.5, 0.5);
+      burger3.scene.scale.set(1,1,1);
       burger3.scene.rotation.set(90,0,0);
       burger3.scene.position.set(0, -0.4, 0);
       
       const burger4 = await loadGLTF('./model/new_york_style.glb');
-      burger4.scene.scale.set(0.1, 0.1, 0.1);
+      burger4.scene.scale.set(1,1,1);
       burger4.scene.rotation.set(90,0,0);
       burger4.scene.position.set(0, -0.4, 0);
       
       const burger5 = await loadGLTF('./model/tikka_burger.glb');
-      burger5.scene.scale.set(0.5, 0.5, 0.5);
+      burger5.scene.scale.set(1,1,1);
       burger5.scene.rotation.set(90,0,0);
       burger5.scene.position.set(0, -0.4, 0);
 
